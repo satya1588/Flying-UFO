@@ -23,6 +23,7 @@ body {
   height: 600px;
   flex-flow: column;
   align-items: center;
+  max-height: 100vh;
 }
 
 iframe {
