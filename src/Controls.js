@@ -24,7 +24,7 @@ function jump(event) {
 }
 
 function keyDown(event) {
-    if (event.keyCode == 38 || event.keyCode == 32 || event.keyCode == 87) {
+    if (event.keyCode == 38 || event.keyCode == 31 || event.keyCode == 87) {
         jump();
     }
 }
