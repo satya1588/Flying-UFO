@@ -1,0 +1,29 @@
+function Sprite(x, y, width, height, path) {
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.image = new Image();
+    this.path = path;
+
+    this.draw = function (context, xCanvas, yCanvas) {
+        this.image.src = this.path;
+        context.drawImage(this.image, this.x, this.y, this.width, this.height, xCanvas, yCanvas, this.width, this.height);
+    }
+}
+
+let background_sprite = new Sprite(0, 0, 1008, 500, "src/sprites/background.png"),
+    menu_sprite = new Sprite(0, 0, 212, 66, "src/sprites/main-menu.png"),
+    sand = new Sprite(0, 0, 128, 128, "src/sprites/land.png"),
+    Ufo_sprite = [],
+    collider = [],
+    sound_on = new Sprite(0, 0, 45, 45, "src/sprites/unmute.png"),
+    sound_off = new Sprite(0, 0, 45, 45, "src/sprites/mute.png");
+
+for (let i = 0; i < NUM_OBSTACLES; i++) {
+    collider[i] = new Sprite(0, 0, OBSTACLE_WIDTHS[i], OBSTACLE_HEIGHTS[i], OBSTACLE_PATHS[i]);
+}
+
+Ufo_sprite[0] = new Sprite(0, 0, 96, 65, "src/sprites/Ufo.png");
+Ufo_sprite[1] = new Sprite(0, 0, 96, 65, "src/sprites/Ufo2.png");
+Ufo_sprite[2] = new Sprite(0, 0, 96, 65, "src/sprites/Ufo-hit.png");
