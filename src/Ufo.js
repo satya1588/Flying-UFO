@@ -3,7 +3,7 @@ let Ufo = {
     y: 0,
     height: Ufo_sprite[0].height,
     width: Ufo_sprite[0].width,
-    gravity: 0.8,
+    gravity: 0.9,
     speed: 0,
     jumpForce: 16.6,
     numberJumps: 0,
